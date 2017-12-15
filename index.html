@@ -1,9 +1,79 @@
-<html>
+
+<!DOCTYPE HTML>
+<HTML>
+
+<head>
+    <!--Import Google Icon Font-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <!--Import Bulma.css-->
+    <link type "text/css" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.6.1/css/bulma.css">
+    <link type "text/css" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.6.1/css/bulma.min.css.map">
+
+    <!-- Link Stylesheet -->
+
+    <link type="text/css" rel="stylesheet" href=".css/styles.css">
+
+    <!-- Font Stylesheet -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
+    <!--mobile optimization-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Plan Your Date</title>
+</head>
+
 
 <body>
-    Hello world! Bye !
-    <script src="https://code.jquery.com/jquery.js"></script>
-    <script src="assets/javascript/event.js"></script>
+    <div>
+        <h1> It's A Date</h1>
+    </div>
+
+    <div class="modal">
+        <div class="modal-background"></div>
+        <div class="modal-card">
+            <header class="modal-card-head">
+                <p class="modal-card-title">
+                    <h2>Create an Account</h2>
+                </p>
+                <!-- <button class="delete" aria-label="close"></button> -->
+            </header>
+            <section class="modal-card-body">
+                <div class="field">
+                    <label class="label">
+                        <strong>Name</strong>
+                    </label>
+                    <div class="control">
+                        <input class="input" type="text" placeholder="e.g Alex Smith">
+                    </div>
+                </div>
+
+                <div class="field">
+                    <label class="label">
+                        <strong>Email</strong>
+                    </label>
+                    <div class="control">
+                        <input class="input" type="email" placeholder="e.g. alexsmith@gmail.com">
+                    </div>
+                </div>
+            </section>
+            <footer class="modal-card-foot">
+                <button class="button is-success" id="saveBtn">
+                    <a href="results.html">
+                        <strong>Save</strong>
+                    </a>
+                </button>
+                <button class="button is-success" id="loginBtn">
+                    <a href="login.html">
+                        <strong>Log In</strong>
+                    </a>
+                </button>
+            </footer>
+        </div>
+    </div>
+
+
 </body>
 
-</html>
+</HTML>
+

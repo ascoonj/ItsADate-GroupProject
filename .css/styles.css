@@ -1,0 +1,44 @@
+
+/* Background wallpaper */
+
+body {
+    background-image: url("https://i.pinimg.com/originals/61/cc/b4/61ccb4ce4a6a5f10aa097d9baedc7b37.jpg ");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    background-position: right top;
+    background-attachment: fixed;
+    text-align: center;
+}
+
+ .modal-card{
+background-color: rgb(8, 91, 102);
+opacity:0.8 !important;
+max-width: 300px;
+padding: 40px;
+margin: auto;
+border-radius: 25px;
+opacity: 1;
+}
+
+ .modal-background{
+    margin: 30px;
+    padding: auto;
+}
+
+h2, .field, .button {
+    position: relative;
+    padding: auto;
+    margin: 10px;
+}
+
+h1{
+    color: #c9d0d4; 
+    font-family: 'Helvetica Neue', sans-serif; 
+    font-size: 62px; 
+    font-weight: 100; 
+    line-height: 50px; 
+    letter-spacing: 1px; 
+    padding: 0 0 40px; 
+    border-bottom: double #555; 
+    }
+    
