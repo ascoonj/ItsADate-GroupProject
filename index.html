@@ -1,10 +1,10 @@
-
 <!DOCTYPE HTML>
 <HTML>
 
 <head>
     <!--Import Google Icon Font-->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:600i|Ubuntu" rel="stylesheet">
 
     <!--Import Bulma.css-->
     <link type "text/css" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.6.1/css/bulma.css">
@@ -32,40 +32,72 @@
     <div class="modal">
         <div class="modal-background"></div>
         <div class="modal-card">
-            <header class="modal-card-head">
+            <div class="vl"></div>
+
+            <header class="modal-card-head newUser">
                 <p class="modal-card-title">
-                    <h2>Create an Account</h2>
+                    <h2>New User</h2>
                 </p>
-                <!-- <button class="delete" aria-label="close"></button> -->
             </header>
+
+
+
+            <header class="modal-card-head logIn">
+                <p class="modal-card-title">
+                    <h2>Log In</h2>
+                </p>
+            </header>
+            <!-- makes bubble bigger -->
+            <br>
+            <br>
+
+
+
             <section class="modal-card-body">
                 <div class="field">
-                    <label class="label">
-                        <strong>Name</strong>
+                    <label class="label hidden">
+                        <strong>Email</strong>
                     </label>
                     <div class="control">
-                        <input class="input" type="text" placeholder="e.g Alex Smith">
+                        <input class="input hidden" type="text" placeholder="e.g loverboy@gmail.com">
                     </div>
                 </div>
 
                 <div class="field">
-                    <label class="label">
-                        <strong>Email</strong>
+                    <label class="label hidden">
+                        <strong>Password</strong>
                     </label>
                     <div class="control">
-                        <input class="input" type="email" placeholder="e.g. alexsmith@gmail.com">
+                        <input class="input hidden" type="email" placeholder="make it good...">
                     </div>
                 </div>
+
+
+                <div class="field">
+                    <label class="label hidden">
+                        <strong>Confirm Password</strong>
+                    </label>
+                    <div class="control">
+                        <input class="input hidden" type="email" placeholder="just making sure...">
+                    </div>
+                </div>
+                <br>
             </section>
+
             <footer class="modal-card-foot">
-                <button class="button is-success" id="saveBtn">
+                <button class="button is-success hidden" id="signUpBtn">
                     <a href="results.html">
-                        <strong>Save</strong>
+                        <strong>Sign Up</strong>
                     </a>
                 </button>
-                <button class="button is-success" id="loginBtn">
+                <button class="button is-success hidden" id="logInBtn">
                     <a href="login.html">
                         <strong>Log In</strong>
+                    </a>
+                </button>
+                <button class="button is-success hidden" id="signOutBtn">
+                    <a href="login.html">
+                        <strong>Sign Out</strong>
                     </a>
                 </button>
             </footer>
@@ -76,4 +108,3 @@
 </body>
 
 </HTML>
-
