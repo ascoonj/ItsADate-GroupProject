@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Firebase Authentication</title>
+
+    <!-- Bootstrap File -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7"
+        crossorigin="anonymous">
+        
+    <!-- My CSS File -->
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+
+    <!-- JQuery -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+    <!-- Firebase Reference -->
+    <script src="https://www.gstatic.com/firebasejs/4.7.0/firebase.js"></script>
+
+    <!-- Moment.js Reference -->
+    <!-- <script src=https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.19.3/moment.min.js></script> -->
+</head>
+ 
+<body>
+
+    <!-- Overall Bootstrap Grid -->
+    <div class="container">
+
+        <!-- Jumbotron -->
+        <div class="jumbotron mainHeader">
+            <h1 class="text-center">Log In or Sign Up</h1>
+            <h3 class="text-center">Testing firebase email/pswd authentication</h3>
+        </div>
+
+        
+
+        <div class="row secondRow">
+            <div class="col-lg-12">
+                <!-- Enter new employee -->
+                <div class="panel panel-warning">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">User info</h3>
+                    </div>
+                    <div class="panel-body">
+                        <form>
+                            <div class="form-group">
+                                <label for="emailInput">Email</label>
+                                <input type="text" class="form-control" id="emailInput">
+                            </div>
+
+                            <div class="form-group">
+                                <label for="pswdInput">Password</label>
+                                <input type="text" class="form-control" id="pswdInput">
+                            </div>
+
+                            <div class="form-group">
+                                <label for="confirmInput">Confirm Password</label>
+                                <input type="text" class="form-control" id="confirmInput">
+                            </div>
+
+                        
+
+                            <button class="btn btn-default" id="btnLogin">Login</button>
+                            <button class="btn btn-default" id="btnSignup">Sign Up</button>
+                            <button class="btn btn-default" id="btnLogout">Logout</button>
+
+                        </form>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- My JS File -->
+    <script type="text/javascript" src="assets/javascript/fbase.js"></script>
+
+    <!-- <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDjv6KApCTx7THqCKqLhCRo4x7erp7Fu6s&libraries=places"></script> -->
+</body>
+
+</html>
