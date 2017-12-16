@@ -1,86 +1,71 @@
-/* Background wallpaper */
-
-body {
-    background-image: url("https://i.pinimg.com/originals/61/cc/b4/61ccb4ce4a6a5f10aa097d9baedc7b37.jpg ");
-    background-repeat: no-repeat;
-    background-size: 100% 100%;
-    background-position: right top;
-    background-attachment: fixed;
-    text-align: center;
-}
-
-.modal-card {
-    background-color: #DD3352;
-    opacity: 0.8 !important;
-    max-width: 300px;
-    padding: 40px;
-    margin: auto;
-    border-radius: 45px;
-    opacity: 1;
-}
-
-.modal-background {
-    margin: 30px;
-    padding: auto;
-}
-
-h2,
-.field,
-.button {
-    position: relative;
-    padding: auto;
-    margin: 10px;
-}
-
-/* its a date title */
-h1 {
-    color: #AA273F;
-    font-family: 'Ubuntu', sans-serif;
-    font-size: 62px;
-    font-weight: bold;
-    font-style: italic;
-    letter-spacing: 1px;
-    padding: 30px 0px 30px 0px;
-    text-decoration: underline;
-}
-
-/* everything in beggining is hidden until shown */
-.hidden {
-    display: none;
-}
-
-.newUser {
-    float: left;
-    padding-left: 0px;
-    display: block;
-    padding-top: -20px;
-    font-family: 'Open Sans', sans-serif;
-    font-style: italic;
-}
-
-/* vertical line in between new user and log in */
-.vl {
-    border-left: 5px solid #AA273F;
-    position: absolute;
-    left: 50%;
-    padding-top: 70px;
-}
-
 .logIn {
-    float: right;
-    padding-right: 25px;
-    display: block;
-    padding-top: -20px;
-    font-family: 'Open Sans', sans-serif;
-    font-style: italic;  
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    width: 120px;
+    padding-top: 40px;
+    font-size: 20px;
+    font-family: 'Cabin', sans-serif;
+    padding-left: 40px;
 }
 
-h2:hover {
-    background-color: pink;
-    border-radius: 45px;
-    padding: 20px 5px 20px 5px;
-    cursor: pointer;
-
-
+.logo {
+    position: relative;
+    padding-top: 20px;
+    font-family: 'Lobster', cursive;
+    font-size: 40px;
 }
 
+.submitSignIn {
+    padding-top: 10px;
+}
+
+.socialIcon {
+    font-size: 50px;
+    width: 50px;
+}
+
+.landingBody {
+    background-color: #ff3860;
+}
+
+.mainHeader {
+    background-color: #ff3860;
+    padding-bottom: 20px;
+}
+
+.connectArea {
+    background-color: #ff3860;  
+}
+
+.logInAtLogInPage {
+    font-family: 'Cabin', sans-serif;
+    font-size: 20px;
+    letter-spacing: 4px;
+}
+
+
+.logInAtLogInPageSignUp {
+    font-family: 'Cabin', sans-serif;
+    font-size: 20px;
+    letter-spacing: 4px;
+    padding-left: 10px;
+}
+
+.submitButtonsEverywhere {
+    font-family: 'Cabin', sans-serif;
+}
+
+.avatar {
+    padding-bottom: 20px;
+}
+
+.newSearch {
+    position: absolute;
+    top: 0px;
+    width: 120px;
+    padding-top: 40px;
+    font-size: 20px;
+    font-family: 'Cabin', sans-serif;
+    padding-left: 990px;
+}
