@@ -1,23 +1,12 @@
 .logIn {
-    position: absolute;
-    top: 0px;
-    right: 0px;
-    width: 120px;
-    padding-top: 40px;
-    font-size: 20px;
     font-family: 'Cabin', sans-serif;
-    padding-left: 40px;
+    padding-left: 100px;
 }
 
 .logo {
-    position: relative;
-    padding-top: 20px;
     font-family: 'Lobster', cursive;
     font-size: 40px;
-}
-
-.submitSignIn {
-    padding-top: 10px;
+    padding-left: 110px;
 }
 
 .socialIcon {
@@ -31,11 +20,10 @@
 
 .mainHeader {
     background-color: #ff3860;
-    padding-bottom: 20px;
 }
 
 .connectArea {
-    background-color: #ff3860;  
+    background-color: #ff3860;
 }
 
 .logInAtLogInPage {
@@ -43,7 +31,6 @@
     font-size: 20px;
     letter-spacing: 4px;
 }
-
 
 .logInAtLogInPageSignUp {
     font-family: 'Cabin', sans-serif;
@@ -56,16 +43,10 @@
     font-family: 'Cabin', sans-serif;
 }
 
-.avatar {
-    padding-bottom: 20px;
+.newSearch {
+    font-family: 'Cabin', sans-serif;
 }
 
-.newSearch {
-    position: absolute;
-    top: 0px;
-    width: 120px;
-    padding-top: 40px;
-    font-size: 20px;
-    font-family: 'Cabin', sans-serif;
-    padding-left: 990px;
+.iconTwitter {
+    margin-right: 70px;
 }
