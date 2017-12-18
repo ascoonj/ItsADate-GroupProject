@@ -65,7 +65,5 @@ $.ajax({
         var pSix = $("<p>").html("Website: " + displayStringEvent);
         pFive.append(pSix);
         console.log(displayStringEvent);
-        
-
     };
 });
