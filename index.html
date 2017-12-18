@@ -22,57 +22,48 @@
 
     <!--mobile optimization-->
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Sign Up</title>
+    <title>Login</title>
 </head>
-
-
-<!-- Menu -->
-<section class="hero is-primary is-medium is-bold">
+<section class="hero is-success is-fullheight">
     <div class="hero-head mainHeader">
-        <header class="nav">
-            <div class="container">
-                <div class="nav-left logo">
-                    <a class="nav-item">
-                        It's A Date
-                    </a>
-                </div>
-                <span class="nav-toggle">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </span>
-                <div class="nav-right nav-menu logIn">
-                    <a class="nav-item is-active" href="login.html">
-                        Log In
-                    </a>
+        <nav class="navbar is-danger">
+            <div class="navbar-brand logo">
+                <a class="navbar-item">
+                    It's A Date
+                </a>
+            </div>
+
+            <div class="navbar-end logo">
+                <div class="navbar-item">
+                    <div class="field is-grouped iconTwitter">
+                        <p class="control">
+                            <a class="bd-tw-button button" data-social-network="Twitter" data-social-action="tweet" data-social-target="http://bulma.io"
+                                href="login.html">
+                                <span class="icon">
+                                    <i class="fa fa-key"></i>
+                                </span>
+                                <span>
+                                    Log In
+                                </span>
+                            </a>
+
+                        </p>
+                    </div>
                 </div>
             </div>
-        </header>
+    </div>
+    </nav>
     </div>
 
-    <!-- Middle Intro -->
     <div class="hero-body landingBody">
         <div class="container has-text-centered">
-            <h1 class="title logInAtLogInPage">
-                Welcome!
-            </h1>
-            <h2 class="subtitle logInAtLogInPage">
-                Sign up below to get started
-            </h2>
-        </div>
-    </div>
-</section>
-
-
-
-<!-- Contact -->
-<section class="hero">
-    <div class="hero-body">
-        <div class="container">
-            <div class="columns">
-                <div class="column">
-                    <form action="#" method="POST">
+            <div class="column is-4 is-offset-4">
+                <h3 class="title logInAtLogInPage">Sign Up</h3>
+                <p class="subtitle logInAtLogInPage">Please fill out information to proceed.</p>
+                <div class="box">
+                    <form>
                         <div class="field">
+<<<<<<< HEAD
                             <label class="label" id: "firstName">First Name</label>
                             <p class="control has-icons-left">
                                 <input class="input" type="text" placeholder="Please type your First Name...">
@@ -119,58 +110,43 @@
                                     <i class="fa fa-lock"></i>
                                 </span>
                             </p>
+=======
+                            <div class="control">
+                                <input class="input is-large" type="email" placeholder="First Name" autofocus="">
+                            </div>
                         </div>
 
-                        <div class="field is-grouped submitSignIn">
-                            <p class="control">
-                                <a class="button is-danger submitButtonsEverywhere" href="location.html" type="submit">Submit</a>
-                            </p>
+                        <div class="field">
+                                <div class="control">
+                                    <input class="input is-large" type="email" placeholder="Last Name" autofocus="">
+                                </div>
+                            </div>
+
+                        <div class="field">
+                            <div class="control">
+                                <input class="input is-large" type="password" placeholder="Your Email">
+                            </div>
                         </div>
 
+                        <div class="field">
+                            <div class="control">
+                                <input class="input is-large" type="password" placeholder="Your Password">
+                            </div>
+>>>>>>> 2251f6392d105c28b31285de49a507208d833e98
+                        </div>
+
+                        <div class="field">
+                            <div class="control">
+                                <input class="input is-large" type="password" placeholder="Confirm Your Password">
+                            </div>
+                        </div>
+
+                        <a href="location.html" class="button is-block is-danger is-large submitButtonsEverywhere">Sign Up</a>
                     </form>
                 </div>
             </div>
         </div>
     </div>
 </section>
-
-<!-- Social Media -->
-<section class="hero is-primary">
-    <div class="hero-body connectArea">
-        <div class="container">
-            <nav class="level">
-                <div class="level-left">
-                    <div class="level-item">
-                        <h1 class="title is-4 logInAtLogInPage">Connect With Us</h1>
-                    </div>
-                </div>
-                <div class="level-right">
-                    <div class="level-item">
-                        <p class="level-item socialIcon">
-                            <i class="fa fa-facebook-official" aria-hidden="true"></i>
-                        </p>
-                        <p class="level-item socialIcon">
-                            <i class="fa fa-twitter-square" aria-hidden="true"></i>
-                        </p>
-                        <p class="level-item socialIcon">
-                            <i class="fa fa-github-square" aria-hidden="true"></i>
-                        </p>
-                    </div>
-                </div>
-            </nav>
-        </div>
-    </div>
-</section>
-
-<!-- Footer -->
-<section class="hero is-dark">
-    <div class="hero-body has-text-centered submitButtonsEverywhere">
-        <p>Copyright @
-            <a>It's A Date 2017</a>.
-        </p>
-    </div>
-</section>
-
-</body>
 
 </HTML>
