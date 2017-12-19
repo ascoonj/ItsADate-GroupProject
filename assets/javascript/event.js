@@ -1,4 +1,4 @@
-var queryURL = "https://api.seatgeek.com/2/events?geoip=true&per_page=4&client_id=OTk0NTAwOHwxNTEzMTI5OTU4Ljk1"
+var queryURL = "https://api.seatgeek.com/2/events?geoip=false&per_page=4&client_id=OTk0NTAwOHwxNTEzMTI5OTU4Ljk1"
 
 var restLat;
 var restLon;
@@ -57,9 +57,12 @@ $.ajax({
                 var pVenue= $("<p>").text("Venue: " + eventVenue);
 
                 var eventWebsite = eventsObject[i].url;
-                var stringEvent = "View SeatGeek Event"
-                var displayStringEvent = stringEvent.link(eventWebsite)
-                var pWebsite = $("<p>").html(displayStringEvent);
+                var aTag = document.createElement("a");
+                aTag.setAttribute("href", eventWebsite);
+                aTag.setAttribute("target", "_blank");
+                aTag.innerHTML = "View SeatGeek Event";
+                var pWebsite = $("<p>").html(aTag);
+                
 
                 var eventAddressLn1 = eventsObject[i].venue.address;
                 var eventCity = eventsObject[i].venue.city;
@@ -74,6 +77,7 @@ $.ajax({
                 console.log(splitDateTime)
                 console.log(splitDateTime[0]);
                 console.log(splitDateTime[1]);
+                console.log(aTag);
                 console.log(eventAddressLn1)
                 console.log(eventCity);
                 console.log(eventVenue);

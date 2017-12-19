@@ -63,20 +63,24 @@
                 <p class="subtitle logInAtLogInPage">We'll find the best deals around you!</p>
                 <div class="box">
                     <figure class="avatar">
-                        <img src=".css/location.png">
+                        <a href="results.html">
+                            <img src=".css/location.png">
+                        </a>
                     </figure>
                     <form>
                         <div class="field">
                             <div class="control">
-                                <input class="input is-large" type="email" placeholder="Zip Code" autofocus="">
+                                <input class="input is-large" type="email" placeholder="Zip Code" autofocus="" id="zipInput">
                             </div>
                         </div>
-                        <a href="results.html" class="button is-block is-danger is-large submitButtonsEverywhere">Search</a>
+                        <a class="button is-block is-danger is-large submitButtonsEverywhere" id="zipSearch">Search</a>
                     </form>
                 </div>
             </div>
         </div>
     </div>
 </section>
+<script src="https://code.jquery.com/jquery.js"></script>
+<script src="assets/javascript/location.js"></script>
 
 </HTML>
