@@ -19,6 +19,8 @@
     <!-- Font Stylesheet -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 
+    <!-- Firebase Reference -->
+    <script src="https://www.gstatic.com/firebasejs/4.7.0/firebase.js"></script>
 
     <!--mobile optimization-->
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -84,7 +86,7 @@
                         <div class="field">
                             <label class="label" id: "emailAddress">Email</label>
                             <p class="control has-icons-left">
-                                <input class="input" type="text" placeholder="e.g loverboy14@yahoo.com">
+                                <input class="input" type="text" placeholder="e.g loverboy14@yahoo.com" id="emailInput">
                                 <span class="icon is-small is-left">
                                     <i class="fa fa-envelope"></i>
                                 </span>
@@ -94,7 +96,7 @@
                         <div class="field">
                             <label class="label" id: "password">Password</label>
                             <p class="control has-icons-left">
-                                <input class="input" type="password" placeholder="Make it good...">
+                                <input class="input" type="password" placeholder="Make it good..." id="pswdInput">
                                 <span class="icon is-small is-left">
                                     <i class="fa fa-key"></i>
                                 </span>
@@ -104,7 +106,7 @@
                         <div class="field">
                             <label class="label" id: "passwordConfirm">Confirm Password</label>
                             <p class="control has-icons-left">
-                                <input class="input" type="password" placeholder="Just making sure...">
+                                <input class="input" type="password" placeholder="Just making sure..." id="confirmInput">
                                 <span class="icon is-small is-left">
                                     <i class="fa fa-lock"></i>
                                 </span>
@@ -114,12 +116,18 @@
                         <div class="field">
                             <div class="control">
 
-                        <a href="location.html" class="button is-block is-danger is-large submitButtonsEverywhere">Sign Up</a>
+                                <button class="button is-block is-danger is-large submitButtonsEverywhere" id="btnSignup">Sign Up</button>
+                                <!-- <button class="button is-block is-danger is-large submitButtonsEverywhere" id="btnLogout">Log Out</button> -->
                     </form>
+                    <p id="errorDisplay"></p>
+                    </div>
+                    </div>
                 </div>
             </div>
-        </div>
-    </div>
 </section>
+
+<script src="https://code.jquery.com/jquery.js"></script>
+
+<script src="assets/javascript/fbase.js"></script>
 
 </HTML>
