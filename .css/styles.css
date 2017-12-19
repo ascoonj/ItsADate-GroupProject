@@ -66,6 +66,19 @@
     display: inline;
 }
 
+.radioButton {
+    float: right;
+}
+
+.box figure img {
+	opacity: 1;
+	transition: .3s ease-in-out;
+}
+
+.box figure:hover img {
+	opacity: .8;
+  transform: scale(1.05);
+}
 
 /* Responsiveness tried no results (syntax) */
 
