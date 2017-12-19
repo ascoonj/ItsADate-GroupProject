@@ -62,6 +62,10 @@
     transform: scale(1.05);
 }
 
+.displayRestaurant {
+    display: inline;
+}
+
 
 /* Responsiveness tried no results (syntax) */
 

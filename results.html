@@ -71,6 +71,7 @@
             </div>
         </div>
     </div>
+    <div id = "map"></div>
     <!-- </div> -->
 </nav>
 
@@ -85,28 +86,28 @@
                         <div class="container">
 
                             <!-- first column -->
-                            <div class="columns">
+                            <div class="columns displayEvents">
 
-                                <div class="column is-3">
+                                <div class="column is-3" id = "event-0">
                                     <figure class="radio is-1by3">
                                         <input type="radio" name="answer" class="panel-body" id="display1">
                                     </figure>
                                 </div>
 
-                                <div class="column is-3">
+                                <div class="column is-3" id = "event-1">
                                     <figure class="radio is-1by3">
                                         <input type="radio" name="answer" class="panel-body" id="display2">
                                     </figure>
                                 </div>
 
                                 <div class="column is-3">
-                                    <figure class="radio is-1by3">
+                                    <figure class="radio is-1by3" id = "event-2">
                                         <input type="radio" name="answer" class="panel-body" id="display3">
                                     </figure>
                                 </div>
 
                                 <div class="column is-3">
-                                    <figure class="radio is-1by3">
+                                    <figure class="radio is-1by3" id = "event-3">
                                         <input type="radio" name="answer" class="panel-body" id="display4">
                                     </figure>
                                 </div>
@@ -139,10 +140,10 @@
     <br>
 
     <!-- Restaurant Results -->
-    <div class="colums">
-        <div class="column">
+    <div class="columns">
+        <div class="column displayRestaurant">
             <label class="radio">
-                <input type="radio" name="answer" class="panel-body displayRestaurant">
+                <input type="radio" name="answer" class="panel-body">
                 <label>Value</label>
             </label>
         </div>
@@ -185,11 +186,16 @@
             <a>It's A Date 2017</a>.
         </p>
         <!-- jQuery JS -->
-        <script src="https://code.jquery.com/jquery.js"></script>
-        <!-- Code to the JavaScript File -->
-        <script src="assets/javascript/event.js"></script>
+        
     </div>
 </section>
+
+<script src="https://code.jquery.com/jquery.js"></script>
+<!-- Code to the JavaScript File -->
+<script src="assets/javascript/event.js"></script>
+<!-- Google Maps API Places Library -->
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDjv6KApCTx7THqCKqLhCRo4x7erp7Fu6s&libraries=places&callback=initMap"
+async defer></script>
 
 </body>
 
