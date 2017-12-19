@@ -1,26 +1,38 @@
 //var userInput = "";
-var zipCode = $("#zipInput").val().trim();
+
 var queryURL;
-var testZip = (/(^\d{5}$)|(^\d{5}-\d{4}$)/);
 
 
 $(".locationSearch").on("click", function (event) {
 
         event.preventDefault();
 
-        location.href = "../results.html"
+        var userZip = $("#zipInput").val().trim();
+        localStorage.setItem("zip", userZip);
 
-        if (zipCode === "") {
-                queryURL = "https://api.seatgeek.com/2/events?geoip=true&per_page=4&client_id=OTk0NTAwOHwxNTEzMTI5OTU4Ljk1";
-        } else if (!testZip.test(zipCode)) {
-                console.log("Invalid zip code");
+        location.href = "results.html";
 
-        } else {
-                queryURL = "https://api.seatgeek.com/2/events?geoip=false&per_page=4&postal_code=" + zipCode + "&client_id=OTk0NTAwOHwxNTEzMTI5OTU4Ljk1";
-        }
-
-        console.log(queryURL);
 });
+
+
+var zipCode = localStorage.getItem("zip");
+var testZip = (/(^\d{5}$)|(^\d{5}-\d{4}$)/);
+console.log(zipCode);
+
+
+if (zipCode === "") {
+        queryURL = "https://api.seatgeek.com/2/events?geoip=true&per_page=4&client_id=OTk0NTAwOHwxNTEzMTI5OTU4Ljk1";
+} else if (!testZip.test(zipCode)) {
+        console.log("Invalid zip code");
+
+} else {
+        queryURL = "https://api.seatgeek.com/2/events?geoip=" + zipCode + "&per_page=4&client_id=OTk0NTAwOHwxNTEzMTI5OTU4Ljk1";
+}
+
+
+console.log(queryURL);
+
+
 
 var restLat;
 var restLon;
@@ -168,11 +180,11 @@ function callback(results, status) {
         console.log("now the results");
         console.log(results);
         if (status === google.maps.places.PlacesServiceStatus.OK) {
-
+                $(".displayRestaurant").empty();
                 for (var i = 0; i < 6; i++) {
                         // restuarants = results;
                         console.log(results[i]);
-                        console.log("Restaurant Name: ", results[i].name);
+                        console.log("Restaurant Name: " + results[i].name);
                         findDetail(results[i]);
                         console.log("Restaurant Icon: ", results[i].icon);
                         console.log("Restaurant Rating: ", results[i].rating);
@@ -195,13 +207,15 @@ function callback(results, status) {
                         var restRating = $("<p>").text("Rating " + results[i].rating);
                         var restAddress = $("<p>").text("Address " + results[i].vicinity);
                         findDetail(results[i].place_id).then(function (details) {
-                                restOpeningHours = $("<p>").text("Restaurant Hours " + (place.opening_hours.weekday_text[i]));
+                                for (var j = 0; j < place.opening_hours.weekday_text.length; j++) {
+                                        restOpeningHours = $("<p>").text("Restaurant Hours " + (place.opening_hours.weekday_text[i]));
+                                }
                         });
                         var restPrice = $("<p>").text("Price Level " + results[i].price_level);
 
-                        restDiv.append(restIcon).append(restName).append(restRating).append(restAddress).append(restPrice);
+                        restSection.append(restIcon).append(restName).append(restRating).append(restAddress).append(restPrice).append(restOpeningHours);
 
-                        $(".displayRestaurant").append(restDiv);
+                        $(".displayRestaurant").append(restSection);
 
 
                 }
@@ -222,7 +236,7 @@ function findDetail(place) {
                                         console.log(place.opening_hours.weekday_text[j]);
 
                                 }
-                                //resolve(place);
+                                resolve(place);
                         } else {
                                 // else reject with status
                                 reject(status);
@@ -230,6 +244,20 @@ function findDetail(place) {
                 });
         });
 }
+
+
+// function findDetail(place) {
+//         return new Promise(function(resolve,reject) {
+//           service.getDetails({placeId: place.place_id}, function(place,status) {
+//             if (status == google.maps.places.PlacesServiceStatus.OK) {
+//               resolve(place);
+//             } else {
+//               reject(status);
+//             }
+//           });
+//         });
+//       }
+
 
 //$(".displayEvents").on("click", ".eventSection", displayRestaurant);
 $(".displayEvents").on("click", ".eventsection", function () {
