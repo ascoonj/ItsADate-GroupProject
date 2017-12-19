@@ -28,174 +28,331 @@
     <title>Results</title>
 </head>
 
+<body>
 
-<!-- Menu -->
-<nav class="navbar is-danger">
-    <div class="navbar-brand logo">
-        <a class="navbar-item">
-            It's A Date
-        </a>
-    </div>
+    <!-- Menu -->
+    <nav class="navbar is-danger">
+        <div class="navbar-brand logo">
+            <a class="navbar-item">
+                It's A Date
+            </a>
+        </div>
 
-    <div class="navbar-end logo">
-        <div class="navbar-item">
-            <div class="field is-grouped">
-                <p class="control">
-                    <a class="bd-tw-button button" data-social-network="Twitter" data-social-action="tweet" data-social-target="http://bulma.io"
-                        target="_blank" href="https://twitter.com/intent/tweet?text=Bulma: a modern CSS framework based on Flexbox&hashtags=bulmaio&url=http://bulma.io&via=jgthms">
-                        <span class="icon">
-                            <i class="fa fa-twitter"></i>
-                        </span>
-                        <span>
-                            Tweet
-                        </span>
-                    </a>
+        <div class="navbar-end logo">
+            <div class="navbar-item">
+                <div class="field is-grouped">
+                    <p class="control">
+                        <a class="bd-tw-button button" data-social-network="Twitter" data-social-action="tweet" data-social-target="http://bulma.io"
+                            target="_blank" href="https://twitter.com/intent/tweet?text=Bulma: a modern CSS framework based on Flexbox&hashtags=bulmaio&url=http://bulma.io&via=jgthms">
+                            <span class="icon">
+                                <i class="fa fa-twitter"></i>
+                            </span>
+                            <span>
+                                Tweet
+                            </span>
+                        </a>
 
-                </p>
+                    </p>
+                </div>
+            </div>
+            <div class="navbar-item">
+                <div class="field is-grouped iconTwitter">
+                    <p class="control">
+                        <a class="bd-tw-button button" data-social-network="Twitter" data-social-action="tweet" data-social-target="http://bulma.io"
+                            href="login.html">
+                            <span class="icon">
+                                <i class="fa fa-sign-out"></i>
+                            </span>
+                            <span>
+                                Logout
+                            </span>
+                        </a>
+
+                    </p>
+                </div>
             </div>
         </div>
-        <div class="navbar-item">
-            <div class="field is-grouped iconTwitter">
-                <p class="control">
-                    <a class="bd-tw-button button" data-social-network="Twitter" data-social-action="tweet" data-social-target="http://bulma.io"
-                        href="login.html">
-                        <span class="icon">
-                            <i class="fa fa-sign-out"></i>
-                        </span>
-                        <span>
-                            Logout
-                        </span>
-                    </a>
-
-                </p>
-            </div>
-        </div>
-    </div>
-    <div id = "map"></div>
-    <!-- </div> -->
-</nav>
+        <div id="map"></div>
+        <!-- </div> -->
+    </nav>
 
 
-<!-- Contact -->
-<section class="hero">
-    <div class="hero-body">
-        <div class="container">
-            <div class="columns">
-                <section class="hero">
-                    <div class="hero-body">
-                        <div class="container">
+    <!-- Contact -->
+    <section class="hero">
+        <div class="hero-body">
+            <div class="container">
+                <div class="columns">
+                    <section class="hero">
+                        <div class="hero-body">
+                            <div class="container">
 
-                            <!-- first column -->
-                            <div class="columns displayEvents">
+                                <!-- first column -->
+                                <div class="columns displayEvents">
 
-                                <div class="column is-3" id = "event-0">
-                                    <figure class="radio is-1by3">
-                                        <input type="radio" name="answer" class="panel-body" id="display1">
-                                    </figure>
+                                    <!-- first box -->
+                                    <div class="box is-3" id="event-0">
+
+                                        <div class="media-left">
+                                            <figure class="image is-2by1">
+                                                <img src="https://bulma.io/images/placeholders/640x320.png" alt="Image">
+                                            </figure>
+                                        </div>
+                                        <div class="media-content">
+                                            <div class="content">
+                                                <figure class="radio is-1by3 radioButton">
+                                                    <input type="radio" name="answer" class="panel-body" id="display1">
+                                                </figure>
+                                            </div>
+                                            <nav class="level is-mobile">
+                                                <div class="level-left">
+                                                    <a class="level-item">
+                                                        <span class="icon is-small">
+                                                            <i class="fa fa-reply"></i>
+                                                        </span>
+                                                    </a>
+                                                    <a class="level-item">
+                                                        <span class="icon is-small">
+                                                            <i class="fa fa-retweet"></i>
+                                                        </span>
+                                                    </a>
+                                                    <a class="level-item">
+                                                        <span class="icon is-small">
+                                                            <i class="fa fa-heart"></i>
+                                                        </span>
+                                                    </a>
+                                                </div>
+                                            </nav>
+                                        </div>
+                                    </div>
+
+                                    <!-- second box -->
+                                    <div class="box is-3" id="event-1">
+                                        <article class="media"></article>
+                                        <div class="media-left">
+                                            <figure class="image is-2by1">
+                                                <img src="https://bulma.io/images/placeholders/640x320.png" alt="Image">
+                                            </figure>
+                                        </div>
+                                        <div class="media-content">
+                                            <div class="content">
+                                                <figure class="radio is-1by3 radioButton">
+                                                    <input type="radio" name="answer" class="panel-body" id="display2">
+                                                </figure>
+                                            </div>
+                                            <nav class="level is-mobile">
+                                                <div class="level-left">
+                                                    <a class="level-item">
+                                                        <span class="icon is-small">
+                                                            <i class="fa fa-reply"></i>
+                                                        </span>
+                                                    </a>
+                                                    <a class="level-item">
+                                                        <span class="icon is-small">
+                                                            <i class="fa fa-retweet"></i>
+                                                        </span>
+                                                    </a>
+                                                    <a class="level-item">
+                                                        <span class="icon is-small">
+                                                            <i class="fa fa-heart"></i>
+                                                        </span>
+                                                    </a>
+                                                </div>
+                                            </nav>
+                                        </div>
+                                    </div>
+
+                                    <!-- third box -->
+                                    <div class="box is-3" id="event-2">
+                                        <article class="media"></article>
+                                        <div class="media-left">
+                                            <figure class="image is-2by1 image imgMed">
+                                                <img src="https://bulma.io/images/placeholders/640x320.png" alt="Image">
+                                            </figure>
+                                        </div>
+                                        <div class="media-content">
+                                            <div class="content">
+                                                <figure class="radio is-1by3 radioButton">
+                                                    <input type="radio" name="answer" class="panel-body" id="display3">
+                                                </figure>
+                                            </div>
+                                            <nav class="level is-mobile">
+                                                <div class="level-left">
+                                                    <a class="level-item">
+                                                        <span class="icon is-small">
+                                                            <i class="fa fa-reply"></i>
+                                                        </span>
+                                                    </a>
+                                                    <a class="level-item">
+                                                        <span class="icon is-small">
+                                                            <i class="fa fa-retweet"></i>
+                                                        </span>
+                                                    </a>
+                                                    <a class="level-item">
+                                                        <span class="icon is-small">
+                                                            <i class="fa fa-heart"></i>
+                                                        </span>
+                                                    </a>
+                                                </div>
+                                            </nav>
+                                        </div>
+                                    </div>
+
+                                    <!-- fourth box -->
+                                    <div class="box is-3" id="event-3">
+                                        <article class="media"></article>
+                                        <div class="media-left">
+                                            <figure class="image is-2by1">
+                                                <img src="https://bulma.io/images/placeholders/640x320.png" alt="Image">
+                                            </figure>
+                                        </div>
+                                        <div class="media-content">
+                                            <div class="content">
+                                                <figure class="radio is-1by3 radioButton">
+                                                    <input type="radio" name="answer" class="panel-body" id="display4">
+                                                </figure>
+                                            </div>
+                                            <nav class="level is-mobile">
+                                                <div class="level-left">
+                                                    <a class="level-item">
+                                                        <span class="icon is-small">
+                                                            <i class="fa fa-reply"></i>
+                                                        </span>
+                                                    </a>
+                                                    <a class="level-item">
+                                                        <span class="icon is-small">
+                                                            <i class="fa fa-retweet"></i>
+                                                        </span>
+                                                    </a>
+                                                    <a class="level-item">
+                                                        <span class="icon is-small">
+                                                            <i class="fa fa-heart"></i>
+                                                        </span>
+                                                    </a>
+                                                </div>
+                                            </nav>
+                                        </div>
+                                    </div>
+
                                 </div>
-
-                                <div class="column is-3" id = "event-1">
-                                    <figure class="radio is-1by3">
-                                        <input type="radio" name="answer" class="panel-body" id="display2">
-                                    </figure>
-                                </div>
-
-                                <div class="column is-3">
-                                    <figure class="radio is-1by3" id = "event-2">
-                                        <input type="radio" name="answer" class="panel-body" id="display3">
-                                    </figure>
-                                </div>
-
-                                <div class="column is-3">
-                                    <figure class="radio is-1by3" id = "event-3">
-                                        <input type="radio" name="answer" class="panel-body" id="display4">
-                                    </figure>
-                                </div>
-
                             </div>
-                        </div>
 
-                    </div>
-                </section>
+                        </div>
+                    </section>
+                </div>
             </div>
         </div>
-    </div>
-</section>
+    </section>
 
-<!-- Save Link -->
-<section>
 
-    <div class="panel-heading" class="panel panel-default">
-        <a href="#" class="save">Save</a>
-    </div>
-    <br>
-</section>
 
-<!-- Restaurant Results Header -->
-<section>
-    <header>
-        <div class="panel-heading" class="panel panel-default"> Restaurant Results
-        </div>
-    </header>
-    <br>
+    <!-- Restaurant Results Header -->
+    <section>
+        <header>
+            <div class="panel-heading" class="panel panel-default">
+                <center> Restaurant Results</center>
+            </div>
+        </header>
+        <br>
 
-    <!-- Restaurant Results -->
-    <div class="columns">
+        <!-- Restaurant Results -->
         <div class="column displayRestaurant">
-            <label class="radio">
-                <input type="radio" name="answer" class="panel-body">
-                <label>Value</label>
-            </label>
-        </div>
-    </div>
-</section>
-<br>
 
-<!-- Social Media -->
-<section class="hero is-primary">
-    <div class="hero-body connectArea">
-        <div class="container">
-            <nav class="level">
-                <div class="level-left">
-                    <div class="level-item">
-                        <h1 class="title is-3 logInAtLogInPage">Connect With Us</h1>
-                    </div>
+            <!-- Restaurant Column 1 -->
+            <div class="column" id="eventRestaurant-0">
+                <figure class="radio">
+                    <input type="radio" name="answer" class="panel-body" id="display1">
+                </figure>
+            </div>
+            <!-- Restaurant Column 2 -->
+            <div class="column" id="eventRestaurant-1">
+                <figure class="radio">
+                    <input type="radio" name="answer" class="panel-body" id="display2">
+                </figure>
+            </div>
+            <!-- Restaurant Column 3 -->
+            <div class="column">
+                <figure class="radio" id="eventRestaurant-2">
+                    <input type="radio" name="answer" class="panel-body" id="display3">
+                </figure>
+            </div>
+            <!-- Restaurant Column 4 -->
+            <div class="column">
+                <figure class="radio" id="eventRestaurant-3">
+                    <input type="radio" name="answer" class="panel-body" id="display4">
+                </figure>
+            </div>
+            <!-- Restaurant Column 5 -->
+            <div class="column">
+                <figure class="radio" id="eventRestaurant-4">
+                    <input type="radio" name="answer" class="panel-body" id="display3">
+                </figure>
+            </div>
+            <!-- Restaurant Column 6 -->
+            <div class="column">
+                <figure class="radio" id="eventRestaurant-5">
+                    <input type="radio" name="answer" class="panel-body" id="display4">
+                </figure>
+            </div>
+            <!-- Save Link -->
+            <section>
+
+                <div class="panel-heading" class="panel panel-default">
+                    <a href="#" class="save">
+                        <center>Save</center>
+                    </a>
                 </div>
-                <div class="level-right">
-                    <div class="level-item">
-                        <p class="level-item socialIcon">
-                            <i class="fa fa-facebook-official" aria-hidden="true"></i>
-                        </p>
-                        <p class="level-item socialIcon">
-                            <i class="fa fa-twitter-square" aria-hidden="true"></i>
-                        </p>
-                        <p class="level-item socialIcon">
-                            <i class="fa fa-github-square" aria-hidden="true"></i>
-                        </p>
-                    </div>
-                </div>
-            </nav>
+                <br>
+            </section>
         </div>
-    </div>
-</section>
+    </section>
+    <br>
 
-<!-- Footer -->
-<section class="hero is-dark">
-    <div class="hero-body has-text-centered submitButtonsEverywhere">
-        <p>Copyright @
-            <a>It's A Date 2017</a>.
-        </p>
-        <!-- jQuery JS -->
-        
-    </div>
-</section>
 
-<script src="https://code.jquery.com/jquery.js"></script>
-<!-- Code to the JavaScript File -->
-<script src="assets/javascript/event.js"></script>
-<!-- Google Maps API Places Library -->
-<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDjv6KApCTx7THqCKqLhCRo4x7erp7Fu6s&libraries=places&callback=initMap"
-async defer></script>
+    <!-- Social Media -->
+    <section class="hero is-primary">
+        <div class="hero-body connectArea">
+            <div class="container">
+                <nav class="level">
+                    <div class="level-left">
+                        <div class="level-item">
+                            <h1 class="title is-3 logInAtLogInPage">Connect With Us</h1>
+                        </div>
+                    </div>
+                    <div class="level-right">
+                        <div class="level-item">
+                            <p class="level-item socialIcon">
+                                <i class="fa fa-facebook-official" aria-hidden="true"></i>
+                            </p>
+                            <p class="level-item socialIcon">
+                                <i class="fa fa-twitter-square" aria-hidden="true"></i>
+                            </p>
+                            <p class="level-item socialIcon">
+                                <i class="fa fa-github-square" aria-hidden="true"></i>
+                            </p>
+                        </div>
+                    </div>
+                </nav>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <section class="hero is-dark">
+        <div class="hero-body has-text-centered submitButtonsEverywhere">
+            <p>Copyright @
+                <a>It's A Date 2017</a>.
+            </p>
+            <!-- jQuery JS -->
+
+        </div>
+    </section>
+
+    <script src="https://code.jquery.com/jquery.js"></script>
+    <!-- Code to the JavaScript File -->
+    <script src="assets/javascript/event.js"></script>
+    <!-- Google Maps API Places Library -->
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDjv6KApCTx7THqCKqLhCRo4x7erp7Fu6s&libraries=places&callback=initMap"
+        async defer></script>
 
 </body>
 

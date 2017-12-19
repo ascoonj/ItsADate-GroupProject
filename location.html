@@ -22,7 +22,7 @@
 
     <!--mobile optimization-->
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Location</title>
+    <title>It's a Date | Search</title>
 </head>
 
 <!-- navbar -->
@@ -59,21 +59,21 @@
     <div class="hero-body landingBody">
         <div class="container has-text-centered">
             <div class="column is-4 is-offset-4">
-                <h3 class="title logInAtLogInPage">Location</h3>
-                <p class="subtitle logInAtLogInPage">We'll find the best deals around you!</p>
+                <h3 class="title logInAtLogInPage">Search</h3>
+                <p class="subtitle logInAtLogInPage">Plan your date in one place!</p>
                 <div class="box">
-                    <figure class="avatar">
-                        <a href="results.html">
+                    <figure class="avatar locationSearch">
+                        <!-- <a href="results.html"> -->
                             <img src=".css/location.png">
                         </a>
                     </figure>
                     <form>
                         <div class="field">
                             <div class="control">
-                                <input class="input is-large" type="email" placeholder="Zip Code" autofocus="" id="zipInput">
+                                <input class="input is-large" type="text" placeholder="Zip Code" autofocus="" id="zipInput">
                             </div>
                         </div>
-                        <a class="button is-block is-danger is-large submitButtonsEverywhere" id="zipSearch">Search</a>
+                        <a class="button is-block is-danger is-large submitButtonsEverywhere locationSearch" id="zipSearch">Search</a>
                     </form>
                 </div>
             </div>
@@ -81,6 +81,7 @@
     </div>
 </section>
 <script src="https://code.jquery.com/jquery.js"></script>
-<script src="assets/javascript/location.js"></script>
+<!-- <script src="assets/javascript/location.js"></script> -->
+<script src="assets/javascript/event.js"></script>
 
 </HTML>
