@@ -1,4 +1,4 @@
-var queryURL = "https://api.seatgeek.com/2/events?geoip=true&per_page=5&client_id=OTk0NTAwOHwxNTEzMTI5OTU4Ljk1"
+var queryURL = "https://api.seatgeek.com/2/events?geoip=true&per_page=4&client_id=OTk0NTAwOHwxNTEzMTI5OTU4Ljk1"
 
 console.log(queryURL);
 //ajax call//
