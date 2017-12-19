@@ -1,5 +1,10 @@
 var queryURL = "https://api.seatgeek.com/2/events?geoip=false&per_page=4&client_id=OTk0NTAwOHwxNTEzMTI5OTU4Ljk1";
 var userInput = "";
+var zipCode = $("#zipInput").val().trim();
+
+
+
+
 
 $.ajax({
     url: queryURL,
