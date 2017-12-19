@@ -10,8 +10,16 @@ $.ajax({
     console.log(response);
     $("#zipSearch").on("click", function(event){        
         var zipCode = $("#zipInput").val().trim();
+        var locationPara =  new URLSearchParams("events?geoip=false&per_page=4");
+        var userInput = "";
         console.log(zipCode);
-           
+        if(userInput === zipCode){
+            locationPara.set("geoip", zipCode);
+            console.log("hi")
+        }else{
+            locationPara.has("geoip", true);
+        }
+        
 
     });
 });
