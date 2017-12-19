@@ -42,6 +42,17 @@
 
 .submitButtonsEverywhere {
     font-family: 'Cabin', sans-serif;
+    margin: 5px;
+    display: inline;
+}
+
+#btnLogout {
+    display: none;
+    float: left;
+}
+
+#errorDisplay {
+    text-align: center;
 }
 
 .newSearch {

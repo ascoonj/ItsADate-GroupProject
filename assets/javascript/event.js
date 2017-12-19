@@ -215,7 +215,7 @@ function callback(results, status) {
 
                         restSection.append(restIcon).append(restName).append(restRating).append(restAddress).append(restPrice).append(restOpeningHours);
 
-                        $(".displayRestaurant").append(restSection);
+                        $("#eventRestaurant-" + i).append(restSection);
 
 
                 }

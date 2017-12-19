@@ -56,6 +56,9 @@ $("#btnSignup").on("click", function (event) {
     } else {
         const promise = auth.createUserWithEmailAndPassword(userEmail, userPswd);
         promise.catch(event => console.log(event.message));
+        location.href = "location.html"
+        $("#errorDisplay").empty();
+        
     }
 
 });
