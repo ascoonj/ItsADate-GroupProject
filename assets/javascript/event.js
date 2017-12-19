@@ -65,9 +65,10 @@ $.ajax({
                 var pFive = $("<p>").text("Location: " + eventLocation);
                 //pFour.append(pFive);
                 console.log(eventLocation);
-                var eventWebsite = eventsObject[i].url;
-                var stringEvent = "View SeatGeek Event"
-                var displayStringEvent = stringEvent.link(eventWebsite)
+                var eventWebsite = eventsObject[i].url;                                          
+                var stringEvent = "View SeatGeek Event"                
+                var displayStringEvent = stringEvent.link(eventWebsite, "target = 'blank'")
+                console.log(displayStringEvent)
                 var pSix = $("<p>").html("Website: " + displayStringEvent);
                 //pFive.append(pSix);
 
