@@ -1,4 +1,26 @@
-var queryURL = "https://api.seatgeek.com/2/events?geoip=true&per_page=4&client_id=OTk0NTAwOHwxNTEzMTI5OTU4Ljk1"
+//var userInput = "";
+var zipCode = $("#zipInput").val().trim();
+var queryURL;
+var testZip = (/(^\d{5}$)|(^\d{5}-\d{4}$)/);
+
+
+$(".locationSearch").on("click", function (event) {
+
+        event.preventDefault();
+
+        location.href = "../results.html"
+
+        if (zipCode === "") {
+                queryURL = "https://api.seatgeek.com/2/events?geoip=true&per_page=4&client_id=OTk0NTAwOHwxNTEzMTI5OTU4Ljk1";
+        } else if (!testZip.test(zipCode)) {
+                console.log("Invalid zip code");
+
+        } else {
+                queryURL = "https://api.seatgeek.com/2/events?geoip=false&per_page=4&postal_code=" + zipCode + "&client_id=OTk0NTAwOHwxNTEzMTI5OTU4Ljk1";
+        }
+
+        console.log(queryURL);
+});
 
 var restLat;
 var restLon;
@@ -51,21 +73,24 @@ $.ajax({
                 //displays the date which is housed in the index position 0//
                 var pDate = $("<p>").text("Date: " + splitDateTime[0]);
                 //displays the time which is housed in the index position 1//
-                var pTime= $("<p>").text("Time: " + splitDateTime[1]);
+                var pTime = $("<p>").text("Time: " + splitDateTime[1]);
 
                 var eventVenue = eventsObject[i].venue.name;
-                var pVenue= $("<p>").text("Venue: " + eventVenue);
+                var pVenue = $("<p>").text("Venue: " + eventVenue);
 
                 var eventWebsite = eventsObject[i].url;
-                var stringEvent = "View SeatGeek Event"
-                var displayStringEvent = stringEvent.link(eventWebsite)
-                var pWebsite = $("<p>").html(displayStringEvent);
+                var aTag = document.createElement("a");
+                aTag.setAttribute("href", eventWebsite);
+                aTag.setAttribute("target", "_blank");
+                aTag.innerHTML = "View SeatGeek Event";
+                var pWebsite = $("<p>").html(aTag);
+
 
                 var eventAddressLn1 = eventsObject[i].venue.address;
                 var eventCity = eventsObject[i].venue.city;
                 var pAddress = $("<p>").html("Address: " + eventAddressLn1 + ", " + eventCity);
-                
-                
+
+
                 //Test outputs
                 console.log(eventTitle);
                 console.log(eventType);
@@ -74,22 +99,16 @@ $.ajax({
                 console.log(splitDateTime)
                 console.log(splitDateTime[0]);
                 console.log(splitDateTime[1]);
+                console.log(aTag);
                 console.log(eventAddressLn1)
                 console.log(eventCity);
                 console.log(eventVenue);
-               
+
                 eventSection.append(pTitle).append(pType).append(pDate).append(pTime).append(pVenue).append(pAddress).append(pWebsite);
 
-             //   $("#event-" + i).append($("#indivEvent-" + i));
+                //   $("#event-" + i).append($("#indivEvent-" + i));
                 $("#event-" + i).append(eventSection);
 
-                // $("#displayEvent0").append($("#indivEvent-0").html());
-                // $("#displayEvent1").append($("#indivEvent-1"));
-                // $("#displayEvent2").append($("#indivEvent-2"));
-                // $("#displayEvent3").append($("#indivEvent-3"));
-                // $("#displayEvent0").append(eventSection);
-
-                // console.log(displayStringEvent);
                 // restLat = eventsObject[i].venue.location.lat;
                 // restLon = eventsObject[i].venue.location.lon;
 
@@ -97,7 +116,7 @@ $.ajax({
 
         // var event1 = $("#indivEvent-0");
         //$("#displayEvent0").append(event1);
-        
+
         // $("#displayEvent1").append($("#indivEvent-1"));
         // $("#displayEvent2").append($("#indivEvent-2"));
         // $("#displayEvent3").append($("#indivEvent-3"));
@@ -162,8 +181,11 @@ function callback(results, status) {
                         // console.log("Restaurant Opening: ", results[i].opening_hours.weekday_text.length);
                         console.log("Restaurant Place_Id: ", results[i].place_id);
 
-                        var restOpeningHours;
-                        var restDiv = $("<div class = 'restOption'>");
+                        var restOpeningHours = $("<div class = openHrs>");
+
+                        var restSection = $("<div class = 'restsection'>");
+                        restSection.attr("id", "eventRestaurant-" + i);
+                        restSection.attr("data-index", i);
 
                         var restIcon = $("<img>");
                         restIcon.addClass("rest-img");
@@ -172,30 +194,16 @@ function callback(results, status) {
                         var restName = $("<p>").text("Restaurant Name " + results[i].name);
                         var restRating = $("<p>").text("Rating " + results[i].rating);
                         var restAddress = $("<p>").text("Address " + results[i].vicinity);
-                        findDetail(results[i].place_id).then(function(details){
+                        findDetail(results[i].place_id).then(function (details) {
                                 restOpeningHours = $("<p>").text("Restaurant Hours " + (place.opening_hours.weekday_text[i]));
-                        });                      
+                        });
                         var restPrice = $("<p>").text("Price Level " + results[i].price_level);
-                        
+
                         restDiv.append(restIcon).append(restName).append(restRating).append(restAddress).append(restPrice);
 
                         $(".displayRestaurant").append(restDiv);
 
 
-
-                        // restId = results[i].place_id;
-
-                        // var serviceHours = new google.maps.places.PlacesService(map);
-                        // serviceHours.getDetails({
-                        //         placeId:results[i].place_id
-                        // }, function (place, status) {
-                        //         if (status === google.maps.places.PlacesServiceStatus.OK) {
-
-                        //                 for (var j = 0; j < place.opening_hours.weekday_text.length; j++) {
-                        //                         console.log("Opening Hours: ", place.opening_hours.weekday_text[j]);
-                        //                 }
-                        //         }
-                        // })
                 }
         }
 };
@@ -212,6 +220,7 @@ function findDetail(place) {
                                 //console.log(place.opening_hours.weekday_text);
                                 for (var j = 0; j < place.opening_hours.weekday_text.length; j++) {
                                         console.log(place.opening_hours.weekday_text[j]);
+
                                 }
                                 //resolve(place);
                         } else {
@@ -231,7 +240,23 @@ $(".displayEvents").on("click", ".eventsection", function () {
 
         restLat = eventsObject[eventIndex].venue.location.lat;
         restLon = eventsObject[eventIndex].venue.location.lon;
-        console.log("cliced event longitude and latitude: ", restLat, restLon);
+        console.log("clicked event longitude and latitude: ", restLat, restLon);
         initMap(restLat, restLon);
 
 });
+
+
+
+// restId = results[i].place_id;
+
+// var serviceHours = new google.maps.places.PlacesService(map);
+// serviceHours.getDetails({
+//         placeId:results[i].place_id
+// }, function (place, status) {
+//         if (status === google.maps.places.PlacesServiceStatus.OK) {
+
+//                 for (var j = 0; j < place.opening_hours.weekday_text.length; j++) {
+//                         console.log("Opening Hours: ", place.opening_hours.weekday_text[j]);
+//                 }
+//         }
+// })
